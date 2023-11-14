@@ -1,8 +1,10 @@
-name: Read Context
+name: First Workflow 1
 on: workflow_dispatch
 jobs:
-  info:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Github
-        run: echo "${{ toJson(github) }}"
+      - name: Print Greeting
+        run: echo "Hello World!"
+      - name: Print Bye
+        run: echo "Good bye!"
