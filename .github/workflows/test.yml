@@ -1,5 +1,5 @@
 name: Tests
-on: push
+on: [workflow_dispatch, push]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -10,4 +10,3 @@ jobs:
         run: npm ci
       - name: Get Coverage
         run: npm run test:coverage
-
