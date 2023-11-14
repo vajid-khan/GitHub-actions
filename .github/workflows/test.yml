@@ -9,5 +9,5 @@ jobs:
       - name: Get Packages
         run: npm ci
       - name: Get Coverage
-        run: npm test:coverage
+        run: npm run test:coverage
 
