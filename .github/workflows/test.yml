@@ -11,7 +11,7 @@ jobs:
       - name: Get Coverage
         run: npm run test:coverage
       - name: Build Artifacts
-        uses: actions/upload-artifcat@v3
+        uses: actions/upload-artifact@v3
         with:
           name: "Artifacts"
           path: |
