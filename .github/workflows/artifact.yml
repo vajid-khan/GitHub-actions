@@ -1,0 +1,17 @@
+name: Tests
+on: [push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make Artifacts
+        run: |
+          echo Hello from Github Action > hello.txt
+          echo Hello World > world.txt
+      - name: Assemble Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: "Artifacts"
+          path: |
+            hello.txt
+            world.txt
